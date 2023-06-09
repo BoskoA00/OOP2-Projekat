@@ -1,0 +1,22 @@
+﻿<Window x:Name="main" WindowStyle="None"
+        x:Class="Projekat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekat" DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Login" Height="800" Width="1000" KeyDown="Izlaz">
+    <StackPanel KeyDown="Izlaz" >
+        <StackPanel Orientation="Horizontal" Margin="50 200 0 0 " HorizontalAlignment="Center">
+            <TextBlock Text="Unesite korisnicko ime: " FontSize="20" Width="300"/>
+            <TextBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="{Binding K.KorisnickoIme,Mode=TwoWay}" FontSize="20" Width="300" Height="40"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="50 50 0 0 " HorizontalAlignment="Center">
+            <TextBlock Text="Unesite lozinku: " FontSize="20" Width="300"/>
+            <PasswordBox x:Name="txtLozinka"  FontSize="20"  Width="300" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        </StackPanel>
+        <Button Content="Uloguj se" Width="300" Height="40" FontSize="20" Margin="50 50 50 50" Click="Button_Click"/>
+        <Button Content="Registruj se" Width="300" Height="40" FontSize="20" Click="Button_Click_1"/>
+    </StackPanel>
+</Window>
